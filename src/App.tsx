@@ -3,19 +3,19 @@ import { AnimatePresence, motion, useMotionValue, useTransform } from 'framer-mo
 import { Heart, Sparkles } from 'lucide-react';
 
 const ACTUAL_REASONS = [
-  "За твою невероятную улыбку, которая освещает всё вокруг", 
-  "За то, как ты смеешься над моими самыми глупыми шутками",
-  "За то, что с тобой я могу быть полностью собой", 
+  "За твою приятную улыбку, которая согревает все внутри меня", 
+  "За твою веселую сторону, когда дурачишься и веселишься",
+  "За то, что с тобой я чувствую себя легко и гораздо лучше", 
   "За твои теплые объятия после долгого дня",
-  "За твои глубокие глаза, в которых можно утонуть", 
-  "За твою искреннюю заботу и нежность ко мне",
+  "За твои глубокие глаза, в которые можно залипнуть", 
+  "За твою нежность и доброту ко мне",
   "За то, что ты всегда веришь в меня и поддерживаешь", 
   "За твои мягкие прикосновения",
-  "За то, что ты мой самый лучший друг на свете", 
-  "За то, как ты смотришь на меня, когда думаешь, что я не вижу"
+  "За то, что ты мой важный друг", 
+  "За то, как мы смотрим на друг друга с приятными чувствами внутри"
 ];
 
-const FULL_REASONS = Array.from({ length: 101 }, (_, i) => {
+const FULL_REASONS = Array.from({ length: 10 }, (_, i) => {
   return ACTUAL_REASONS[i % ACTUAL_REASONS.length];
 }).reverse();
 
@@ -64,7 +64,7 @@ const SwipeableCard = ({ reason, index, isTop, onSwipe, total }: any) => {
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-pink-100 rounded-full blur-2xl opacity-50 -ml-10 -mb-10" />
 
       <h2 className="text-8xl font-black text-rose-50 absolute -top-2 select-none -z-10">
-        #{101 - index}
+        #{10 - index}
       </h2>
       
       <div className="z-10 w-full flex flex-col items-center h-full pt-10 pb-4">
@@ -136,7 +136,7 @@ export default function App() {
               {/* Замените div ниже на тег <img src="/ваше-фото.jpg" className="w-full h-full object-cover" /> */}
               <div className="w-full h-full bg-gray-100 flex items-center justify-center p-4 border border-gray-200">
                 <span className="text-gray-400 text-xs sm:text-sm font-medium text-center leading-relaxed max-w-[150px]">
-                  /* ВСТАВЬ<br/>ПЕРВОЕ ФОТО<br/>СЮДА */
+                  <img src="/photo1.jpg" className="w-full h-full object-cover" />
                 </span>
               </div>
               <div className="absolute bottom-3 font-serif text-base sm:text-lg text-gray-800 italic">Начало истории</div>
@@ -148,7 +148,7 @@ export default function App() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="space-y-3 glass-panel p-6 sm:p-8 rounded-3xl w-full shrink-0"
             >
-              <h1 className="text-4xl sm:text-5xl font-serif font-black text-gradient leading-tight tracking-tight">101 причина</h1>
+              <h1 className="text-4xl sm:text-5xl font-serif font-black text-gradient leading-tight tracking-tight">10 причин</h1>
               <p className="text-sm sm:text-xl font-medium text-rose-100/80 uppercase tracking-[0.15em] sm:tracking-[0.2em] pt-1 sm:pt-2">
                 почему я тебя люблю
               </p>
@@ -214,7 +214,7 @@ export default function App() {
               {/* Замените div ниже на тег <img src="/ваше-фото.jpg" className="w-full h-full object-cover" /> */}
               <div className="w-full h-full bg-gray-100 flex items-center justify-center p-4 border border-gray-200">
                 <span className="text-gray-400 text-sm font-medium text-center leading-relaxed">
-                  /* ВСТАВЬ<br/>ФИНАЛЬНОЕ ФОТО<br/>СЮДА */
+                  <img src="/photo2.jpg" className="w-full h-full object-cover" />
                 </span>
               </div>
               <Heart className="absolute bottom-4 w-6 h-6 text-rose-500 fill-rose-500" />
@@ -227,7 +227,7 @@ export default function App() {
               className="glass-panel p-8 rounded-3xl w-full"
             >
               <h1 className="text-4xl font-serif font-bold text-gradient-gold leading-tight">
-                И еще миллион причин...
+                И еще много много причин...
               </h1>
               <p className="text-2xl mt-4 font-black text-rose-400">
                 Я люблю тебя! ❤️
