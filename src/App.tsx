@@ -123,38 +123,38 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col items-center justify-center p-6 text-center z-10 w-full h-full max-w-md"
+            className="flex flex-col items-center justify-center p-4 sm:p-6 text-center z-10 w-full h-full max-w-md"
           >
             <motion.div
               initial={{ rotate: -5, opacity: 0, scale: 0.8 }}
               animate={{ rotate: 0, opacity: 1, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
-              className="polaroid-card w-64 h-80 flex flex-col items-center justify-center relative mb-12 shadow-2xl"
+              className="polaroid-card w-56 h-72 sm:w-64 sm:h-80 flex flex-col items-center justify-center relative mb-6 sm:mb-12 shadow-2xl shrink-0"
             >
               {/* === МЕСТО ДЛЯ ПЕРВОГО ФОТО === */}
               {/* Замените div ниже на тег <img src="/ваше-фото.jpg" className="w-full h-full object-cover" /> */}
               <div className="w-full h-full bg-gray-100 flex items-center justify-center p-4 border border-gray-200">
-                <span className="text-gray-400 text-sm font-medium text-center leading-relaxed max-w-[150px]">
+                <span className="text-gray-400 text-xs sm:text-sm font-medium text-center leading-relaxed max-w-[150px]">
                   /* ВСТАВЬ<br/>ПЕРВОЕ ФОТО<br/>СЮДА */
                 </span>
               </div>
-              <div className="absolute bottom-4 font-serif text-lg text-gray-800 italic">Начало истории</div>
+              <div className="absolute bottom-3 font-serif text-base sm:text-lg text-gray-800 italic">Начало истории</div>
             </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="space-y-3 glass-panel p-8 rounded-3xl w-full"
+              className="space-y-3 glass-panel p-6 sm:p-8 rounded-3xl w-full shrink-0"
             >
-              <h1 className="text-5xl font-serif font-black text-gradient leading-tight tracking-tight">101 причина</h1>
-              <p className="text-xl font-medium text-rose-100/80 uppercase tracking-[0.2em] pt-2">
+              <h1 className="text-4xl sm:text-5xl font-serif font-black text-gradient leading-tight tracking-tight">101 причина</h1>
+              <p className="text-sm sm:text-xl font-medium text-rose-100/80 uppercase tracking-[0.15em] sm:tracking-[0.2em] pt-1 sm:pt-2">
                 почему я тебя люблю
               </p>
 
               <button
                 onClick={() => setStage('cards')}
-                className="mt-8 px-10 py-4 bg-gradient-to-r from-rose-500 to-pink-600 rounded-full text-white font-bold text-lg shadow-[0_0_40px_rgba(225,29,72,0.4)] hover:shadow-[0_0_60px_rgba(225,29,72,0.6)] hover:scale-105 transition-all duration-300 active:scale-95 flex items-center gap-3 mx-auto"
+                className="mt-6 sm:mt-8 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-rose-500 to-pink-600 rounded-full text-white font-bold text-base sm:text-lg shadow-[0_0_40px_rgba(225,29,72,0.4)] hover:shadow-[0_0_60px_rgba(225,29,72,0.6)] hover:scale-105 transition-all duration-300 active:scale-95 flex items-center gap-2 sm:gap-3 mx-auto"
               >
                 Открыть сердце <Heart className="w-5 h-5 fill-white animate-pulse" />
               </button>
