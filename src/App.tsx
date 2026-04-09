@@ -26,7 +26,6 @@ const SwipeableCard = ({ reason, index, isTop, onSwipe, total }: any) => {
   const opacity = useTransform(dragX, [-200, -100, 0, 100, 200], [0, 1, 1, 1, 0]);
 
   const indexFromTop = total - 1 - index;
-  const isSecond = indexFromTop === 1;
 
   // Рассчитываем эффекты перспективы для карточек под верхней
   const scale = isTop ? 1 : 1 - indexFromTop * 0.05;
@@ -51,7 +50,7 @@ const SwipeableCard = ({ reason, index, isTop, onSwipe, total }: any) => {
       transition={{ type: 'spring', stiffness: 350, damping: 25 }}
       drag={isTop ? "x" : false}
       dragConstraints={{ left: 0, right: 0 }}
-      onDragEnd={(e, { offset, velocity }) => {
+      onDragEnd={(_, { offset, velocity }) => {
         if (Math.abs(offset.x) > 80 || Math.abs(velocity.x) > 500) {
           // Если потянули достаточно далеко или быстро - смахиваем
           onSwipe();
