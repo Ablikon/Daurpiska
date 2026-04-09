@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { AnimatePresence, motion, useMotionValue, useTransform } from 'framer-motion';
 import { Heart, Sparkles } from 'lucide-react';
+import photo1 from './photo1.jpg';
+import photo2 from './photo2.jpg';
 
 const ACTUAL_REASONS = [
   "За твою приятную улыбку, которая согревает все внутри меня", 
@@ -136,7 +138,7 @@ export default function App() {
               {/* Замените div ниже на тег <img src="/ваше-фото.jpg" className="w-full h-full object-cover" /> */}
               <div className="w-full h-full bg-gray-100 flex items-center justify-center p-4 border border-gray-200">
                 <span className="text-gray-400 text-xs sm:text-sm font-medium text-center leading-relaxed max-w-[150px]">
-                  <img src="/photo1.jpg" className="w-full h-full object-cover" />
+                  <img src={photo1} className="w-full h-full object-cover" />
                 </span>
               </div>
               <div className="absolute bottom-3 font-serif text-base sm:text-lg text-gray-800 italic">Начало истории</div>
@@ -214,7 +216,7 @@ export default function App() {
               {/* Замените div ниже на тег <img src="/ваше-фото.jpg" className="w-full h-full object-cover" /> */}
               <div className="w-full h-full bg-gray-100 flex items-center justify-center p-4 border border-gray-200">
                 <span className="text-gray-400 text-sm font-medium text-center leading-relaxed">
-                  <img src="/photo2.jpg" className="w-full h-full object-cover" />
+                  <img src={photo2} className="w-full h-full object-cover" />
                 </span>
               </div>
               <Heart className="absolute bottom-4 w-6 h-6 text-rose-500 fill-rose-500" />
