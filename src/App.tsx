@@ -41,6 +41,7 @@ const SwipeableCard = ({ reason, index, isTop, onSwipe, total }: any) => {
         zIndex: index,
         rotateX: isTop ? 0 : 5, // Легкий наклон назад для карточек внизу
       }}
+      exit={{ x: dragX.get() >= 0 ? 400 : -400, opacity: 0, rotate: dragX.get() >= 0 ? 20 : -20 }}
       style={{
         x: isTop ? dragX : 0,
         rotate: isTop ? rotate : (index % 2 === 0 ? -2 : 2), // Легкий хаос наклона вне свайпа
