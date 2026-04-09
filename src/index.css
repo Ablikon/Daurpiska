@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050505;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  touch-action: none;
+  background-image: 
+    radial-gradient(circle at 10% 50%, rgba(225, 29, 72, 0.15), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(190, 18, 60, 0.15), transparent 30%),
+    linear-gradient(135deg, rgba(88, 28, 135, 0.1) 0%, rgba(159, 18, 57, 0.05) 100%);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #ff7eb3 0%, #ff758c 100%);
+}
+
+.text-gradient-gold {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #F3E7E9 0%, #E3EEFF 99%, #E3EEFF 100%);
+}
+
+.polaroid-card {
+  background: white;
+  padding: 12px 12px 48px 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
