@@ -137,9 +137,7 @@ export default function App() {
               {/* === МЕСТО ДЛЯ ПЕРВОГО ФОТО === */}
               {/* Замените div ниже на тег <img src="/ваше-фото.jpg" className="w-full h-full object-cover" /> */}
               <div className="w-full h-full bg-gray-100 flex items-center justify-center p-4 border border-gray-200">
-                <span className="text-gray-400 text-xs sm:text-sm font-medium text-center leading-relaxed max-w-[150px]">
-                  <img src={photo1} className="w-full h-full object-cover" />
-                </span>
+                <img src={photo1} alt="Начало истории" className="w-full h-full object-cover" />
               </div>
               <div className="absolute bottom-3 font-serif text-base sm:text-lg text-gray-800 italic">Начало истории</div>
             </motion.div>
@@ -215,9 +213,7 @@ export default function App() {
               {/* === МЕСТО ДЛЯ ВТОРОГО ФОТО === */}
               {/* Замените div ниже на тег <img src="/ваше-фото.jpg" className="w-full h-full object-cover" /> */}
               <div className="w-full h-full bg-gray-100 flex items-center justify-center p-4 border border-gray-200">
-                <span className="text-gray-400 text-sm font-medium text-center leading-relaxed">
-                  <img src={photo2} className="w-full h-full object-cover" />
-                </span>
+                <img src={photo2} alt="Финальный момент" className="w-full h-full object-cover" />
               </div>
               <Heart className="absolute bottom-4 w-6 h-6 text-rose-500 fill-rose-500" />
             </motion.div>
